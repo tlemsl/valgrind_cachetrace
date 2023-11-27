@@ -115,7 +115,7 @@ void ensure_stack_size(Int i)
 static void function_entered(fn_node* fn)
 {
   CLG_ASSERT(fn != 0);
-
+  VG_(printf)("Function %s begin\n", fn->name);
 #if CLG_ENABLE_DEBUG
   if (fn->verbosity >=0) {
     Int old = CLG_(clo).verbose;
